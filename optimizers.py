@@ -639,11 +639,3 @@ def komodo_mlipir_algorithm(n, m, p, d, lb, ub, objective_function, max_iters=10
         n = update_population_size(n, delta_f1, delta_f2, a=1)
         
     return best_solution, best_quality
-
-# Example usage with a sample objective function
-def sphere_function(x):
-    return np.sum(x**2)
-
-best_solution, best_quality = komodo_mlipir_algorithm(n=20, m=5, p=0.3, d=0.1, lb=-10, ub=10, objective_function=sphere_function)
-print("Best Solution:", best_solution)
-print("Best Quality:", best_quality)
